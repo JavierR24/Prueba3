@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI Ejemplo</title>
+    <style>
+        .pokemon {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Información del Pokémon</h2>
+    <form id="pokemonForm">
+        <input type="text" id="pokemonName" placeholder="Nombre del Pokémon" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="pokemonInfo" class="pokemon"></div>
+
+    <script>
+        document.getElementById('pokemonForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar la información del Pokémon
+                    const pokemonInfoDiv = document.getElementById('pokemonInfo');
+                    pokemonInfoDiv.innerHTML = `
+                        <h3>${data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h3>
+                        <img src="${data.sprites.front_default}" alt="${data.name}">
+                        <p><strong>Habilidades:</strong> ${data.abilities.map(ability => ability.ability.name).join(', ')}</p>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('pokemonInfo').innerHTML = `<p>No se encontró el Pokémon</p>`;
+                });
+        });
+    </script>
+
+</body>
+</html>

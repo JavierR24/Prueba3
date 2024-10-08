@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> Mi blog personal</h1>
+        <nav>
+            <ul>
+                
+                <li>
+                    <a href="">Inicio</a>
+                </li> 
+                <li>
+                    <a href="">Sobre mi</a>
+                </li>
+                <li>
+                    <a href="">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" >
+        <h2>Sobre mi</h2>
+        <p>¡Hola! Soy un desarrollador web con pasión por la creación de experiencias interactivas.</p>
+    </section> 
+    <section id="portfolio">
+        <h2>Portafolio</h2>
+        <p>Aquí puedes ver algunos de mis proyectos recientes.</p>
+    </section> 
+
+    <article>
+        <h2>Título del artículo</h2>
+        <p>Este es el contenido de un artículo independiente. Podría ser un post en un blog o una noticia.</p>
+    </article> 
+    <aside>
+        <h3>Enlaces relacionados</h3>
+        <ul>
+            <li><a href="#link1">Tema relacionado 1</a></li>
+            <li><a href="#link2">Tema relacionado 2</a></li>
+        </ul>
+    </aside>
+
+    <form action="submit">
+        <label for="name">nombre</label>
+        <input type="text" id="name"  name="nombre"><br><br>
+        <label for="password">contraseña</label>
+        <input type="password" name="contraseña">
+        <label for="email">correo</label>
+        <input type="email" id="correo"  name="correo"><br><br>
+        <label for="edad">Edad</label>
+        <input type="number" name="" id="edad"><br><br>
+        <label for="opt1">Opcion1</label>
+        <input type="checkbox" id="opt1" name="opcion1" value="opcion1"><br><br>
+        <label for="gender_male">Hombre</label>
+        <input type="radio" id="gender_male" name="gender" value="male"><br><br>
+        <label for="gender_female">Mujer</label>
+        <input type="radio" id="gender_female" name="gender" value="female"><br><br>
+        <input type="date" name="fecha de nacimento"><br><br>
+        <input type="file" name="archivo"><br><br>
+        <label for="pais">Selecciona tu pais: </label><br><br>
+        <select name="pais" id="pais">
+            <option value="colombia">Colombia</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+        </select>
+        <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+
+        <input type="button" value="enviar">
+        <input type="reset" value="restablecer">
+    </form>
+
+    <footer>
+        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <a href="#privacy">Política de privacidad</a>
+    </footer>
+    
+</body>
+</html>

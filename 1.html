@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Barra Lateral</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            flex: 3;
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-left: 2px solid #ccc;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenido Principal -->
+    <main>
+        <article>
+            <h1>Título del Artículo Principal</h1>
+            <p>Este es el contenido del artículo principal. Aquí puedes escribir el texto principal que quieres mostrar a los lectores. Este artículo podría ser una publicación de blog o un artículo de noticias.</p>
+            <p>También puedes agregar más párrafos aquí para hacer el contenido más extenso.</p>
+        </article>
+    </main>
+
+    <!-- Barra Lateral -->
+    <aside>
+        <h2>Artículos Relacionados</h2>
+        <ul>
+            <li><a href="#articulo1">Artículo relacionado 1</a></li>
+            <li><a href="#articulo2">Artículo relacionado 2</a></li>
+            <li><a href="#articulo3">Artículo relacionado 3</a></li>
+            <li><a href="#articulo4">Artículo relacionado 4</a></li>
+        </ul>
+
+        <h2>Enlaces de Interés</h2>
+        <ul>
+            <li><a href="#enlace1">Enlace útil 1</a></li>
+            <li><a href="#enlace2">Enlace útil 2</a></li>
+        </ul>
+    </aside>
+
+</body>
+</html>
